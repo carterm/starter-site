@@ -1,2 +1,3 @@
-# medlin
-Repo for new medlin.com website
+# sample-site
+
+Sample 11ty site

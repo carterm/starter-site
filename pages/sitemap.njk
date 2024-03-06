@@ -1,0 +1,19 @@
+---
+title: Sitemap
+description: View all the pages on this website
+---
+
+{% set group = "" %}
+
+<div class="list-group">
+  {%- for page in collections.all | sort(attribute='url') %} {% set folder =
+  page.url.split("/")[1] | title | default('Home',true) %} {% if folder!=group%}
+  <h2>{{folder}}</h2>
+  {% set group = folder %} {% endif %}
+
+  <a class="list-group-item list-group-item-action" href="{{ page.url }}">
+    <div class="fw-bold">{{ page.data.title }}</div>
+    <em> {{ page.data.description }}</em>
+  </a>
+  {%- endfor %}
+</div>
