@@ -4,44 +4,28 @@
     "text": "Site Map"
   },
   {
-    "text": "Order",
+    "text": "Menu 1",
     "items": [
       {
-        "url": "/orders/ordertype/",
-        "text": "ORDER NOW"
+        "url": "/more-pages/",
+        "text": "More Pages"
       },
       {
-        "url": "/orders/order-process/",
-        "text": "Order Process"
-      },
-      {
-        "url": "/orders/prices/",
-        "text": "Prices"
-      },
-      {
-        "url": "/orders/secure-order-new/",
-        "text": "New Orders"
-      },
-      {
-        "url": "/orders/secure-order-renew/",
-        "text": "Returning Customers"
-      },
-      {
-        "url": "/payroll/payroll-edition-chart/",
-        "text": "Payroll Editions"
+        "url": "/next/",
+        "text": "next"
       }
     ]
   },
   {
-    "text": "Misc",
+    "text": "Menu 2",
     "items": [
       {
-        "url": "/misc/keytrouble/",
-        "text": "Key Trouble"
+        "url": "/more-pages/",
+        "text": "More Pages"
       },
       {
-        "url": "/misc/secure-key/",
-        "text": "Resend Lost Key"
+        "url": "/next/",
+        "text": "next"
       }
     ]
   }
