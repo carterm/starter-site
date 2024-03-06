@@ -1,0 +1,75 @@
+{% set ariaCurrent= " aria-current=\"page\"" | safe %}
+
+<nav
+  class="navbar navbar-expand-lg bg-body-tertiary sticky-top shadow"
+  aria-label="Medlin Software Header Menu">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"
+      ><img
+        src="/images/medlin-logo.svg"
+        alt="Medlin Software Inc."
+        class="img-fluid"
+        style="max-height:2.5em"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#primaryHeader"
+      aria-controls="primaryHeader"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="primaryHeader">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {%- for link in nav %} {% if link.items %}
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            >{{link.text}}</a
+          >
+          <ul class="dropdown-menu">
+            {%- for ddlink in link.items %} {%- set isCurrent = ddlink.url ==
+            page.url %}
+            <li>
+              <a
+                class="dropdown-item{{- ' active' if isCurrent -}}"
+                href="{{ddlink.url}}"
+                >{{ddlink.text}}</a
+              >
+            </li>
+            {%- endfor %}
+          </ul>
+        </li>
+        {% else %}
+
+        <li class="nav-item">
+          {%- set isCurrent = link.url == page.url %}
+          <a
+            class="nav-link{{- ' active' if isCurrent -}}"
+            href="{{link.url}}"
+            {{-
+            ariaCurrent
+            if
+            isCurrent
+            -}}
+            >{{link.text}}
+          </a>
+        </li>
+        {% endif %} {%- endfor %}
+      </ul>
+      <form role="search">
+        <input
+          class="form-control"
+          type="search"
+          placeholder="Search"
+          aria-label="Search" />
+      </form>
+    </div>
+  </div>
+</nav>

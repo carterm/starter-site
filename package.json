@@ -1,0 +1,32 @@
+{
+  "name": "starter-site",
+  "version": "1.0.0",
+  "description": "starter website",
+  "author": {
+    "name": "Carter Medlin",
+    "email": "carter.medlin@gmail.com",
+    "url": "https://github.com/carterm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carterm/starter-site.git"
+  },
+  "bugs": "https://github.com/carterm/starter-site/issues",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
+    "GIT cleanup": "git clean -fd"
+  },
+  "private": true,
+  "type": "commonjs",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-plugin-jsdoc": "^48.2.0",
+    "prettier": "^3.0.3"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "csv-parse": "^5.5.0"
+  }
+}
